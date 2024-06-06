@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://scontent.xx.fbcdn.net/v/t1.15752-9/442661124_1452699199462512_1398215379596849277_n.jpg?stp=dst-jpg_p403x403&_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=-iG_pDW_CbEQ7kNvgGhYjWh&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_Q7cD1QGU86HOea6u9pklegHKhzm9oJgUz4BXTRcohk2ziQ1w9Q&oe=667ECCBB">
+    <title>Image Collage</title>
+    <link rel="stylesheet" href="openbox.css">
+</head>
+<body>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <button style="margin: 20px;"    onclick="location.href= '/'">
+        <div class="arrow-wrapper">
+          <div class="arrow"></div>
+  
+        </div>
+    </button>
+    <h1 id="name">error</h1>
+    <script src="script.js"></script>
+    <h2 id="actual"></h2>
+    <div class="collage">
+        <div>
+            <img id="1" src="" onclick="openLightbox(this.src)" alt="Placeholder 1" class="small" onerror="findimg(this.id)">
+            <img id="2" src="" onclick="openLightbox(this.src)"alt="Placeholder 1" class="small" onerror="findimg(this.id)">
+        </div>
+        <img id="3" src="" onclick="openLightbox(this.src)"alt="Placeholder 2" class="medium" onerror="findimg(this.id)">
+        <img id="4" src="" onclick="openLightbox(this.src)"alt="Placeholder 3" class="large" onerror="findimg(this.id)">
+        <img id="5" src="" onclick="openLightbox(this.src)"alt="Placeholder 4" class="medium" onerror="findimg(this.id)">
+        <div>
+            <img id="6" src="" onclick="openLightbox(this.src)"alt="Placeholder 1" class="small" onerror="findimg(this.id)">
+            <img id="7" src="" onclick="openLightbox(this.src)"alt="Placeholder 1" class="small" onerror="findimg(this.id)">
+        </div>
+        <img id="8" src="" onclick="openLightbox(this.src)"alt="Placeholder 6" class="large" onerror="findimg(this.id)">
+        <div>
+            <img id="9" src="" onclick="openLightbox(this.src)"lt="Placeholder 1" class="small" onerror="findimg(this.id)">
+            <img id="10" src="" onclick="openLightbox(this.src)"alt="Placeholder 1" class="small" onerror="findimg(this.id)">
+        </div>
+        <img id="11" src="" onclick="openLightbox(this.src)"alt="Placeholder 8" class="medium" onerror="findimg(this.id)">
+        <img id="12" src="" onclick="openLightbox(this.src)"alt="Placeholder 9" class="large" onerror="findimg(this.id)">
+        <img id="13" src="" onclick="openLightbox(this.src)"alt="Placeholder 10" class="large" onerror="findimg(this.id)">
+        <div>
+            <img id="14" src="" onclick="openLightbox(this.src)" alt="Placeholder 1" class="small" onerror="findimg(this.id)">
+            <img id="15" src="" onclick="openLightbox(this.src)"alt="Placeholder 1" class="small" onerror="findimg(this.id)">
+        </div>
+        <img id="16" src="" onclick="openLightbox(this.src)"alt="Placeholder 2" class="medium" onerror="findimg(this.id)">
+        <img id="17" src="" onclick="openLightbox(this.src)"alt="Placeholder 3" class="large" onerror="findimg(this.id)">
+        <img id="18" src="" onclick="openLightbox(this.src)"alt="Placeholder 4" class="medium" onerror="findimg(this.id)">
+        <div>
+            <img id="19" src="" onclick="openLightbox(this.src)"alt="Placeholder 1" class="small" onerror="findimg(this.id)">
+            <img id="20" src="" onclick="openLightbox(this.src)"alt="Placeholder 1" class="small" onerror="findimg(this.id)">
+        </div>
+        <img id="21" src="" onclick="openLightbox(this.src)"alt="Placeholder 6" class="large" onerror="findimg(this.id)">
+        <div>
+            <img id="22" src="" onclick="openLightbox(this.src)"lt="Placeholder 1" class="small" onerror="findimg(this.id)">
+            <img id="23" src="" onclick="openLightbox(this.src)"alt="Placeholder 1" class="small" onerror="findimg(this.id)">
+        </div>
+        <img id="24" src="" onclick="openLightbox(this.src)"alt="Placeholder 8" class="medium" onerror="findimg(this.id)">
+        <img id="25" src="" onclick="openLightbox(this.src)"alt="Placeholder 9" class="large" onerror="findimg(this.id)">
+        <img id="26" src="" onclick="openLightbox(this.src)"alt="Placeholder 10" class="large" onerror="findimg(this.id)">
+        <div>
+            <img id="27" src="" onclick="openLightbox(this.src)" alt="Placeholder 1" class="small" onerror="findimg(this.id)">
+            <img id="28" src="" onclick="openLightbox(this.src)"alt="Placeholder 1" class="small" onerror="findimg(this.id)">
+        </div>
+        <img id="29" src="" onclick="openLightbox(this.src)"alt="Placeholder 2" class="medium" onerror="findimg(this.id)">
+        <img id="30" src="" onclick="openLightbox(this.src)"alt="Placeholder 3" class="large" onerror="findimg(this.id)">
+        <img id="31" src="" onclick="openLightbox(this.src)"alt="Placeholder 4" class="medium" onerror="findimg(this.id)">
+        <div>
+            <img id="32" src="" onclick="openLightbox(this.src)"alt="Placeholder 1" class="small" onerror="findimg(this.id)">
+            <img id="33" src="" onclick="openLightbox(this.src)"alt="Placeholder 1" class="small" onerror="findimg(this.id)">
+        </div>
+        <img id="34" src="" onclick="openLightbox(this.src)"alt="Placeholder 6" class="large" onerror="findimg(this.id)">
+        <div>
+            <img id="35" src="" onclick="openLightbox(this.src)"lt="Placeholder 1" class="small" onerror="findimg(this.id)">
+            <img id="36" src="" onclick="openLightbox(this.src)"alt="Placeholder 1" class="small" onerror="findimg(this.id)">
+        </div>
+        <img id="37" src="" onclick="openLightbox(this.src)"alt="Placeholder 8" class="medium" onerror="findimg(this.id)">
+        <img id="38" src="" onclick="openLightbox(this.src)"alt="Placeholder 9" class="large" onerror="findimg(this.id)">
+        <img id="39" src="" onclick="openLightbox(this.src)"alt="Placeholder 10" class="large" onerror="findimg(this.id)">
+    </div>
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightbox-image">
+    </div>
+</body>
+</html>

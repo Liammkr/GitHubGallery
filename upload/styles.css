@@ -1,0 +1,9 @@
+.large-input {
+    width: 80%; /* You can adjust the width as needed */
+    height: 900px; /* Adjust the height as needed */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical; /* Allows vertical resizing */
+}
