@@ -14,7 +14,7 @@
     })
 }*/
 function opengallery(id){
-    path = '/gallery/?gallery=' + id
+    path = window.location.href + '/gallery/?gallery=' + id
     //console.log(path)
     window.location.href = path
 }
